@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="card">
+    <h5 class="card-header"><strong>{{individual_record}}</strong></h5>
+    <div class="card-body">
+      <p class="card-text">
+        <strong>Customer ID: </strong>{{individual_record.id}}<br/>
+        <strong>Email: </strong>{{individual_record.email}}<br/>
+        <strong>Phone: </strong>{{individual_record.phone}}<br/>
+        <strong>Address: </strong>{{individual_record.address}}<br/>
+        <strong>State </strong>{{individual_record.state}}<br/>
+        <strong>Zipcode: </strong>{{individual_record.zipcode}}<br/>
+        <strong>Created time: </strong>{{individual_record.created_at}}<br/>
+
+    </p>
+      <a href="{% url 'home' %}" class="btn btn-primary">Go Back</a>
+    </div>
+  </div>
+{% endblock  %}
