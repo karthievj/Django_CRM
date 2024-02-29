@@ -15,7 +15,11 @@
         <strong>Created time: </strong>{{individual_record.created_at}}<br/>
 
     </p>
-      <a href="{% url 'home' %}" class="btn btn-primary">Go Back</a>
     </div>
   </div>
+  <br/>
+  <a href="{% url 'home' %}" class="btn btn-warning">Go Back</a>
+    <a href="{% url 'delete' individual_record.id %}" class="btn btn-danger">Delete</a>
+    <a href="{% url 'update_record' individual_record.id %}" class="btn btn-primary">Update Record</a>
+
 {% endblock  %}
